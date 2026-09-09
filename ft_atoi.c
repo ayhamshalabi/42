@@ -1,0 +1,36 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ayhshala <ayham.shalabi@learner.42.tech    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/09/07 18:59:54 by ayhshala          #+#    #+#             */
+/*   Updated: 2026/09/07 18:59:54 by ayhshala         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+int	ft_atoi(const char *nptr)
+{
+	int	is_negative;
+	int	dest;
+
+	is_negative = 1;
+	dest = 0;
+	while ((*nptr >= '\t' && *nptr <= '\r') || *nptr == ' ')
+		nptr++;
+	if (*nptr == '-' || *nptr == '+')
+	{
+		if (*nptr == '-')
+			is_negative = -1;
+		nptr++;
+	}
+	while (*nptr >= '0' && *nptr <= '9')
+	{
+		dest = dest * 10 + (*nptr - '0');
+		nptr++;
+	}
+	return (dest * is_negative);
+}

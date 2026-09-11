@@ -19,7 +19,7 @@ int	ft_atoi(const char *nptr)
 
 	is_negative = 1;
 	dest = 0;
-	while ((*nptr >= '\t' && *nptr <= '\r') || *nptr == ' ')
+	while ((*nptr >= 9 && *nptr <= 13) || *nptr == 32)
 		nptr++;
 	if (*nptr == '-' || *nptr == '+')
 	{
@@ -27,7 +27,7 @@ int	ft_atoi(const char *nptr)
 			is_negative = -1;
 		nptr++;
 	}
-	while (*nptr >= '0' && *nptr <= '9')
+	while (ft_isdigit(*nptr))
 	{
 		dest = dest * 10 + (*nptr - '0');
 		nptr++;

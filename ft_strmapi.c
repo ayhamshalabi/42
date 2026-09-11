@@ -1,33 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnst.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ayhshala <ayham.shalabi@learner.42.tech    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/10 01:06:20 by ayhshala          #+#    #+#             */
-/*   Updated: 2026/09/10 01:06:20 by ayhshala         ###   ########.fr       */
+/*   Created: 2026/09/10 15:25:47 by ayhshala          #+#    #+#             */
+/*   Updated: 2026/09/10 15:25:47 by ayhshala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *big, const char *little, size_t len)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	size_t	i;
-	size_t	j;
+	char			*res;
+	unsigned int	i;
 
+	res = malloc(ft_strlen(s) + 1);
 	i = 0;
-	if (!*little)
-		return ((char *)big);
-	while (i < len && big[i])
+	if (!res)
+		return (NULL);
+	while (s[i])
 	{
-		j = 0;
-		while (little[j] && i + j < len && big[i] == little[j])
-			j++;
-		if (!little[j])
-			return ((char *)&big[i]);
+		res[i] = f(i, s[i]);
 		i++;
 	}
-	return (NULL);
+	res[i] = '\0';
+	return (res);
 }

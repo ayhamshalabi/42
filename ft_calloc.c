@@ -6,29 +6,21 @@
 /*   By: ayhshala <ayham.shalabi@learner.42.tech    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/10 01:54:56 by ayhshala          #+#    #+#             */
-/*   Updated: 2026/09/10 01:54:56 by ayhshala         ###   ########.fr       */
+/*   Updated: 2026/09/13 14:50:04 by ayhshala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t count, size_t size)
+void	*ft_calloc(size_t n, size_t size)
 {
-	unsigned char	*ptr;
-	size_t			total;
+	void	*ptr;
 
-	if (size != 0 && count > SIZE_MAX / size)
+	if (size != 0 && n > SIZE_MAX / size)
 		return (NULL);
-	if (count == 0 || size == 0)
-		total = 1;
-	else
-		total = count * size;
-	ptr = malloc(total);
+	ptr = malloc(n * size);
 	if (!ptr)
 		return (NULL);
-	while (total--)
-		ptr[total] = 0;
+	ft_bzero(ptr, n * size);
 	return (ptr);
 }
-
-pppppppppppppppppppppppppppppppppppppppppppppppppppp

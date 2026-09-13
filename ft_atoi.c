@@ -6,7 +6,7 @@
 /*   By: ayhshala <ayham.shalabi@learner.42.tech    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/07 18:59:54 by ayhshala          #+#    #+#             */
-/*   Updated: 2026/09/07 18:59:54 by ayhshala         ###   ########.fr       */
+/*   Updated: 2026/09/13 11:51:59 by ayhshala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,11 +33,4 @@ int	ft_atoi(const char *nptr)
 		nptr++;
 	}
 	return (dest * is_negative);
-}
-
-int main(void)
-{
-    char *ptr = "2345";
-    printf("%d\n", ft_atoi(ptr));
-    return (0);
 }

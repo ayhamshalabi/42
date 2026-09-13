@@ -6,7 +6,7 @@
 /*   By: ayhshala <ayham.shalabi@learner.42.tech    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/10 13:53:17 by ayhshala          #+#    #+#             */
-/*   Updated: 2026/09/10 13:53:17 by ayhshala         ###   ########.fr       */
+/*   Updated: 2026/09/13 12:01:06 by ayhshala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ static int	fill_res(char **res, char const *s, char c)
 		while (*s == c)
 			s++;
 		if (!*s)
-			break;
+			break ;
 		len = word_len(s, c);
 		res[i] = malloc(len + 1);
 		if (!res[i])

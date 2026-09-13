@@ -6,7 +6,7 @@
 /*   By: ayhshala <ayham.shalabi@learner.42.tech    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/10 10:24:20 by ayhshala          #+#    #+#             */
-/*   Updated: 2026/09/10 10:24:20 by ayhshala         ###   ########.fr       */
+/*   Updated: 2026/09/13 11:59:09 by ayhshala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*ptr;
 	char	*ptr_start;
-	
+
 	if (start >= ft_strlen(s))
 		return (ft_strdup(""));
 	ptr = malloc(len + 1);

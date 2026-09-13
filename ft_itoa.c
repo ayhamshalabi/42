@@ -6,11 +6,12 @@
 /*   By: ayhshala <ayham.shalabi@learner.42.tech    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/10 12:20:44 by ayhshala          #+#    #+#             */
-/*   Updated: 2026/09/10 12:20:44 by ayhshala         ###   ########.fr       */
+/*   Updated: 2026/09/13 11:57:30 by ayhshala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 static size_t	num_len(long n)
 {
 	size_t	len;

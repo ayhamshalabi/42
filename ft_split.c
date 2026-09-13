@@ -12,9 +12,9 @@
 
 #include "libft.h"
 
-static int	word_count(char const *s, char c)
+static size_t	word_count(char const *s, char c)
 {
-	int	count;
+	size_t	count;
 
 	count = 0;
 	while (*s)
@@ -29,7 +29,7 @@ static int	word_count(char const *s, char c)
 	return (count);
 }
 
-static size_t	word_size(char const *s, char c)
+static size_t	word_len(char const *s, char c)
 {
 	size_t	len;
 
@@ -57,15 +57,16 @@ static int	fill_res(char **res, char const *s, char c)
 		while (*s == c)
 			s++;
 		if (!*s)
-			break ;
-		len = word_size(s, c);
+			break;
+		len = word_len(s, c);
 		res[i] = malloc(len + 1);
 		if (!res[i])
 		{
 			free_res(res, i);
 			return (0);
 		}
-		ft_strlcpy(res[i++], s, len + 1);
+		ft_strlcpy(res[i], s, len + 1);
+		i++;
 		s += len;
 	}
 	res[i] = NULL;

@@ -34,3 +34,10 @@ int	ft_atoi(const char *nptr)
 	}
 	return (dest * is_negative);
 }
+
+int main(void)
+{
+    char *ptr = "2345";
+    printf("%d\n", ft_atoi(ptr));
+    return (0);
+}

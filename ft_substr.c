@@ -6,7 +6,7 @@
 /*   By: ayhshala <ayham.shalabi@learner.42.tech    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/10 10:24:20 by ayhshala          #+#    #+#             */
-/*   Updated: 2026/09/14 15:09:23 by ayhshala         ###   ########.fr       */
+/*   Updated: 2026/09/14 15:32:34 by ayhshala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t	s_len;
 	char	*ptr;
 	char	*ptr_start;
+	size_t	s_len;
 
 	s_len = ft_strlen(s);
 	if (start >= s_len)
@@ -28,9 +28,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (NULL);
 	ptr_start = ptr;
 	s += start;
-	while (len-- && *s)
+	while (len--)
 		*ptr++ = *s++;
 	*ptr = '\0';
 	return (ptr_start);
 }
-.............

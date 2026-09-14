@@ -6,7 +6,7 @@
 /*   By: ayhshala <ayham.shalabi@learner.42.tech    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/10 10:24:20 by ayhshala          #+#    #+#             */
-/*   Updated: 2026/09/14 14:46:16 by ayhshala         ###   ########.fr       */
+/*   Updated: 2026/09/14 15:09:23 by ayhshala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,4 +33,4 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	*ptr = '\0';
 	return (ptr_start);
 }
-...............
+.............

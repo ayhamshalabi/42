@@ -6,7 +6,7 @@
 /*   By: ayhshala <ayham.shalabi@learner.42.tech    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/10 10:58:33 by ayhshala          #+#    #+#             */
-/*   Updated: 2026/09/13 14:13:26 by ayhshala         ###   ########.fr       */
+/*   Updated: 2026/09/14 15:04:48 by ayhshala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	back;
 	size_t	ptr_len;
 
+	if (!s1 || !set)
+		return (NULL);
 	front = front_count(s1, set);
 	if (front != ft_strlen(s1))
 		back = back_count(s1, set);

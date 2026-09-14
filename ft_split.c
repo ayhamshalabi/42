@@ -6,7 +6,7 @@
 /*   By: ayhshala <ayham.shalabi@learner.42.tech    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/10 13:53:17 by ayhshala          #+#    #+#             */
-/*   Updated: 2026/09/13 14:13:42 by ayhshala         ###   ########.fr       */
+/*   Updated: 2026/09/14 14:52:20 by ayhshala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,6 +77,8 @@ char	**ft_split(char const *s, char c)
 {
 	char	**res;
 
+	if (!s)
+		return (NULL);
 	res = malloc(sizeof(char *) * (word_count(s, c) + 1));
 	if (!res)
 		return (NULL);

@@ -6,7 +6,7 @@
 /*   By: ayhshala <ayham.shalabi@learner.42.tech    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/07 18:59:54 by ayhshala          #+#    #+#             */
-/*   Updated: 2026/09/13 14:14:24 by ayhshala         ###   ########.fr       */
+/*   Updated: 2026/09/14 14:14:01 by ayhshala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	ft_atoi(const char *nptr)
 {
-	int	is_negative;
-	int	dest;
+	int		is_negative;
+	long	dest;
 
 	is_negative = 1;
 	dest = 0;

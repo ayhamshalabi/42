@@ -6,7 +6,7 @@
 /*   By: ayhshala <ayham.shalabi@learner.42.tech    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/10 10:51:17 by ayhshala          #+#    #+#             */
-/*   Updated: 2026/09/13 14:13:39 by ayhshala         ###   ########.fr       */
+/*   Updated: 2026/09/14 15:04:48 by ayhshala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	char	*ptr;
 	char	*ptr_start;
 
+	if (!s1 || !s2)
+		return (NULL);
 	ptr = malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
 	if (!ptr)
 		return (NULL);

@@ -6,7 +6,7 @@
 /*   By: ayhshala <ayham.shalabi@learner.42.tech    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/10 18:31:19 by ayhshala          #+#    #+#             */
-/*   Updated: 2026/09/13 14:13:45 by ayhshala         ###   ########.fr       */
+/*   Updated: 2026/09/14 15:00:48 by ayhshala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_putstr_fd(char *s, int fd)
 {
 	int	i;
 
+	if (!s)
+		return ;
 	i = 0;
 	while (s[i])
 		write(fd, &s[i++], 1);
